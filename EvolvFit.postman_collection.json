@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "8e245f77-543f-45f6-9ee5-e171c87aa00a",
+		"name": "EvolvFit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2283903"
+	},
+	"item": [
+		{
+			"name": "FoodItems",
+			"item": [
+				{
+					"name": "GetAllFoodItems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/foodItems",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"foodItems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreatFoodItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Rice\",\r\n    \"calories\": 120,\r\n    \"protein\": 2, \r\n    \"fat\": 0,\r\n    \"carbs\": 30,\r\n    \"acceptedUnits\": \"g\",\r\n    \"itemWeight\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/foodItems",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"foodItems"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetSingleFoodItem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/fooditems/62dd95ab3923a844a4ccb4de",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"fooditems",
+								"62dd95ab3923a844a4ccb4de"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateFoodItem",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Milk\",\r\n    \"calories\": 65,\r\n    \"protein\": 3.3, \r\n    \"carbs\": 5,\r\n    \"fat\": 4,\r\n    \"acceptedUnits\": \"ml\",\r\n    \"itemWeight\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/fooditems/62dd95ab3923a844a4ccb4de",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"fooditems",
+								"62dd95ab3923a844a4ccb4de"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteFoodItem",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/fooditems/62dd95ab3923a844a4ccb4de",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"fooditems",
+								"62dd95ab3923a844a4ccb4de"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Meals",
+			"item": [
+				{
+					"name": "Get All Meals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/meals/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"meals",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Meal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"meal-5\",\r\n    \"category\": \"Dinner\",\r\n    \"foodItems\": [\"62e0f711b9729c3db48f2ab9\", \"62e0f7c3b9729c3db48f2ac8\", \"62e0f897b9729c3db48f2ae3\", \"62e0f8c8b9729c3db48f2ae6\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/meals/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"meals",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Meal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/meals/62e149de666b000ca41c68f9",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"meals",
+								"62e149de666b000ca41c68f9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Meal",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"meal-5\",\r\n    \"category\": \"Dinner\",\r\n    \"foodItems\": [\"62e0f711b9729c3db48f2ab9\", \"62e0f7c3b9729c3db48f2ac8\", \"62e0f897b9729c3db48f2ae3\", \"62e0f8c8b9729c3db48f2ae6\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/meals/62e14b83666b000ca41c690d",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"meals",
+								"62e14b83666b000ca41c690d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Meal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/meals/62e14b83666b000ca41c690d",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"meals",
+								"62e14b83666b000ca41c690d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ojas Thakur\",\r\n    \"calorieRequirement\": 2400,\r\n    \"mealPlan\":[\r\n        {\r\n            \"date\":\"2022-7-29\" ,\r\n            \"meals\":[\"62e149de666b000ca41c68f9\",\"62e14a7b666b000ca41c68ff\"]\r\n        },\r\n        {\r\n            \"date\":\"2022-7-30\" ,\r\n            \"meals\":[\"62e14e59b3aa222c90205a26\",\"62e14b3f666b000ca41c690a\"]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/users/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/users/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single User by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/users/62e1603715e91850a0759e1c",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"62e1603715e91850a0759e1c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mona Thakur\",\r\n    \"calorieRequirement\": 2400,\r\n    \"mealPlan\":[\r\n        {\r\n            \"date\":\"2022-7-29\" ,\r\n            \"meals\":[\"62e149de666b000ca41c68f9\",\"62e14a7b666b000ca41c68ff\"]\r\n        },\r\n        {\r\n            \"date\":\"2022-7-30\" ,\r\n            \"meals\":[\"62e14e59b3aa222c90205a26\",\"62e14b3f666b000ca41c690a\"]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/users/62e15fd615e91850a0759e17",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"62e15fd615e91850a0759e17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/users/62e15fd615e91850a0759e17",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"users",
+								"62e15fd615e91850a0759e17"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
